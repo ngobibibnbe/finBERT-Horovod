@@ -49,5 +49,5 @@ hdfs --daemon start datanode
 - Run the code
 time horovodrun --timeline-filename hrvd.json --gloo -np 4 -H your_hostname_IP_1:2  your_hostname_IP_2:2  --verbose python3 good_finbert_training.py nbr_of_epoch size_of_the_dataset_you_want_to_train
 
-*You can change the nomber of processors , here by default we put 4
-- we thank the prosusAI team without whom this project could have been more difficiult for us
+**You can change the nomber of processors , here by default we put 4
+- we thank the prosusAI team without whom this project could have been more difficiult for us**
