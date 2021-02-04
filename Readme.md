@@ -1,11 +1,10 @@
 - Configure your Hadoop cluster 
-- There is a notebook named treat_data.ipynb in the notebooks directory; you can use it to crop your file into multiple subset depending on the number of processors you want to use 
-- Put the training files inside HDFS file system and change the file and change the destination of files inside the training function (sorry we forgot to add facilities for this)
-- You have the folder runs containing record on your future trains(to visualize it you can install pytorch tensorboard and launch on the runs folder)
-- You can launch the code using the command:
-- Unzip the folder finbert_single_machine and launch the notebook on the notebook folder if you want to test machine learning with no parallelism
+- There is a notebook named treat_data.ipynb in the notebooks directory; use it to crop your file into multiple subsets depending on the number of processors you want to use 
+- Put the training files inside HDFS file system and change the file destination inside the training get_data function of the FinBERT class in finbert.py file 
+- You can launch the code using the command: time horovodrun --timeline-filename hrvd.json --gloo -np 4 -H your_hostname_IP_1:2  your_hostname_IP_2:2  --verbose python3 good_finbert_training.py nbr_of_epoch size_of_the_dataset_you_want_to_train
+- Unzip the folder finbert_single_machine and launch the notebook inside the notebook folder if you want to test machine learning with no parallelism .This code is the code of  ProsusAI team we modify some parameters to speedup the training while loosing a bit in term of accuracy.
 
-- For the distributed machine learning do as following :
+- For the distributed machine learning do as following:
 create the virtual environment
 
 conda env create -f environment.yml
