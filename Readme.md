@@ -1,7 +1,7 @@
 
 - Unzip the folder finbert_single_machine and launch the notebook inside the notebook folder if you want to test machine learning with no parallelism .This code is the code of  ProsusAI team we modify some parameters to speedup the training while loosing a bit in term of accuracy.
 
------------------------------------------------------ For the distributed machine learning do as following------------------------------------------------------
+---------------------------------------------------- For the distributed machine learning do as following----------------------------------------------
 
 - Configure your Hadoop cluster ( We will not give too much detail here you can follow this link for more details:https://www.linode.com/docs/guides/how-to-install-and-set-up-hadoop-cluster/)
 
