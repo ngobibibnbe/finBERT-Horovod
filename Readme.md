@@ -51,7 +51,7 @@ HOROVOD_WITH_PYTORCH=1 HOROVOD_WITH_TENSORFLOW=1 HOROVOD_WITH_SPARK=1 HOROVOD_WI
 ```
 - HDFS: 
 put your crop data in HDFS : ```bash $HADOOP_HOME/bin/hadoop fs -put 1/* directory_name/nbr_of_process/name_of_the_file```
-You can modify it directly inside the get_data function of the finbert file (put it in such a way each worker can easily identify its file)
+You can modify it directly inside the `get_data` function of the finbert file (put it in such a way each worker can easily identify its file)
 ```bash
 hdfs --daemon start datanode  
 ```
@@ -59,5 +59,5 @@ hdfs --daemon start datanode
 ```bash 
 time horovodrun --timeline-filename hrvd.json --gloo -np 4 -H host_ip_1:2,host_ip_2:2 python3 good_finbert_training.py num_of_epoch dataset_chunk_size
 ```
-**You can change the nomber of processors , here by default we put 4**
--**we thank the @prosusAI team without whom this project could have been more difficiult for us**
+**You can change the nomber of processors, here by default we put 4**
+**We thank the @ProsusAI team without whom this project could have been more difficiult for us**
