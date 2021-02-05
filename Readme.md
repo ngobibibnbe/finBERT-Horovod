@@ -59,5 +59,6 @@ hdfs --daemon start datanode
 ```bash 
 time horovodrun --timeline-filename hrvd.json --gloo -np 4 -H host_ip_1:2,host_ip_2:2 python3 good_finbert_training.py num_of_epoch dataset_chunk_size
 ```
-**You can change the nomber of processors, here by default we put 4**
+**You can change the nomber of processors, here by default we put 4** 
+
 **We thank the @ProsusAI team without whom this project could have been more difficiult for us**
